@@ -16,10 +16,13 @@ pipeline {
         }
 
         stage('Build') {
+            tools {
+                gradle 'gradle-8.1.1-bin.zip'
+                jdk 'JDK17'
+            }
             steps {
                 echo '컴파일 및 빌드를 시작합니다...'
-                // 예: Java 프로젝트라면 ./gradlew build, Node라면 npm install 등
-                sh 'echo "Building the project..."'
+                sh 'gradle clean bootJar'
             }
         }
 
