@@ -18,7 +18,7 @@ pipeline {
         stage('Build') {
             tools {
                 gradle 'gradle-8.1.1-bin.zip'
-                jdk 'JDK17'
+                jdk 'JDK21'
             }
             steps {
                 echo '컴파일 및 빌드를 시작합니다...'
