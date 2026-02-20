@@ -17,7 +17,7 @@ pipeline {
 
         stage('Build') {
             tools {
-                gradle 'gradle-8.1.1-bin.zip'
+                gradle 'gradle-9.3.1-bin.zip'
                 jdk 'JDK21'
             }
             steps {
